@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+    background-color: lightgray;
+}
+
+.title{
+    font-size: 3em;
+}
+
+.bot{
+    margin-top: 90%;
+    background-color: pink;
+    height: 200px;
+    width: 65%;
+}
+
+.tabs{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: -webkit-sticky;
+}
+
+.column{
+    width: 10%;
+    height: 150%;
+    top: 0;
+    position: relative;
+}
+
+#navs{
+    position: fixed;
+    height: 100%;
+    top: 0;
+}
+
+.box{
+    visibility: hidden;
+    position: relative;
+    width: 600px; /* 600px/80%? Larghezza fissa rende scritte statiche */
+    margin-left: 20%;
+}
+
+.a{
+    background-color: #b2ebf2;
+    z-index: 4;
+}
+
+.b{
+    background-color: #b4ffff;
+    z-index: 3;
+}
+
+.c{
+    background-color: #80deea;
+    z-index: 2;
+}
+
+.d{
+    background-color: #4bacb8;
+    z-index: 1;
+}
+
+.label{
+    transform: rotate(90deg);
+    transform-origin: 0 100%;
+    position: absolute;
+    width: 300px;
+}
