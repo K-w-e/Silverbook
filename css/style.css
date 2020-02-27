@@ -1,6 +1,10 @@
 body{
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: lightgray;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .title{
@@ -27,6 +31,8 @@ body{
     height: 150%;
     top: 0;
     position: relative;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 #navs{
@@ -35,7 +41,10 @@ body{
     top: 0;
 }
 
+
+
 .box{
+
     visibility: hidden;
     position: relative;
     width: 600px; /* 600px/80%? Larghezza fissa rende scritte statiche */
