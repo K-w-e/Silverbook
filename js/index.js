@@ -20,7 +20,6 @@ function openFirstTab() {
     document.getElementById("secondBox").style.visibility = "hidden";
     document.getElementById("thirdBox").style.visibility = "hidden";
     document.getElementById("fourthBox").style.visibility = "hidden";
-
     //document.getElementById("firstBox").classList.add("fadeInRight");
 /*
     setTimeout(function(){
