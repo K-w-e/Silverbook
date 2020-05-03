@@ -1,7 +1,36 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 body{
+    font-family: 'Inter var';
     overflow: hidden;
     overflow-y: auto;
+    position: relative;
+    min-height: 100vh;
     background-color: lightgray;
+    padding-bottom: 100px;
+}
+
+.blocco{
+    padding: 10px;
+}
+
+.menu{
+    z-index: 100;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+  }
+
+a, a:hover{
+    color: black;
 }
 
 ::-webkit-scrollbar {
@@ -15,9 +44,6 @@ body{
 .bot{
     position: absolute;
     bottom: 0;
-    background-color: pink;
-    height: 200px;
-    width: 50%;
 }
 
 .tabs{
@@ -29,7 +55,7 @@ body{
 }
 
 .column{
-    width: 10%;
+    width: 4%;
     height: 150%;
     top: 0;
     position: relative;
@@ -40,15 +66,15 @@ body{
 #navs{
     position: fixed;
     height: 100%;
+    width: 80%;
     top: 0;
+    right: 0;
 }
-
-
 
 .box{
     visibility: hidden;
     position: relative;
-    width: 800px; /* 600px/80%? Larghezza fissa rende scritte statiche */
+    width: 80%; /* 600px/80%? Larghezza fissa rende scritte statiche */
     margin-left: 10%;
 }
 
@@ -77,4 +103,96 @@ body{
     transform-origin: 0 100%;
     position: absolute;
     width: 300px;
+}
+
+
+/* GALLERY */
+.image{
+    position: fixed;
+    opacity: 0;  
+}
+
+.image:hover{
+    -webkit-animation-play-state: paused;
+}
+
+.test1 {    
+    z-index: 3;
+    animation: imageToLeftBottom 6s linear;
+}
+
+.test2 {    
+    z-index: 2;
+    animation: imageToLeftBottom 8s linear 2s;
+}
+
+.test3 {    
+    z-index: 1;
+    animation: imageToLeftBottom 10s linear 4s;
+}
+
+.test4 {    
+    z-index: 3;
+    animation: imageToRightBottom 6s linear;
+}
+
+.test5 {    
+    z-index: 2;
+    animation: imageToRightBottom 8s linear 2s;
+}
+
+.test6 {    
+    z-index: 1;
+    animation: imageToRightBottom 10s linear 4s;
+}
+
+.prova{
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes imageToLeftBottom {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;        
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        top: 40%;
+        left: 0%;
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        top: 60%;
+        left: -40%;
+        opacity: 1;
+        transform: scale(2.75);
+        width: 18em;
+    }          
+}
+
+@keyframes imageToRightBottom {
+    0% {
+        top: 20%;
+        right: 40%;
+        width: 18em;        
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        top: 40%;
+        right: 0%;
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        top: 60%;
+        right: -40%;
+        opacity: 1;
+        transform: scale(2.75);
+        width: 18em;
+    }          
 }

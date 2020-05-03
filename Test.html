@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background-color: white;
+        }
+
+        .image {    
+            position: absolute;
+            z-index: 3;
+            animation: image 3s linear;
+            opacity: 0;
+        }
+
+        .image2{
+            position: absolute;
+            z-index: 2;
+            animation: image 3s linear 2.5s;
+            opacity: 0;
+        }
+
+        .image3{
+            position: absolute;
+            z-index: 1;
+            animation: image 3s linear 5s;
+            opacity: 0;
+        }
+
+        @keyframes image {
+            0% {
+                width: 18em;        
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+                width: 18em;      
+            }
+            100% {
+                opacity: 1;
+                transform: scale(2.75);
+                width: 18em;
+            }
+            
+        }
+
+    </style>
+
+</head>
+<body>    
+    <img class="image test1" src="https://cataas.com/cat" style="left: 50px;">
+    <img class="image test2" src="https://cataas.com/cat" style="right: 50px;">
+    <img class="image test3" src="https://cataas.com/cat" style="bottom: 50px; right: 50%">
+
+    <img class="image2" src="https://cataas.com/cat/says/hello" style="left: 50px;">
+    <img class="image2" src="https://cataas.com/cat/says/hello" style="right: 50px;">
+    <img class="image2" src="https://cataas.com/cat/says/hello" style="bottom: 50px; right: 50%;">
+
+    <img class="image3" src="https://cataas.com/cat/cute" style="left: 50px;">
+    <img class="image3" src="https://cataas.com/cat/cute" style="right: 50px;">
+    <img class="image3" src="https://cataas.com/cat/cute" style="bottom: 50px; right: 50%;">
+
+   
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+    <script>
+    // Sets the number of stars we wish to display
+    const numStars = 100;
+
+    // For every star we want to display
+    for (let i = 0; i < numStars; i++) {
+    let star = document.createElement("div");  
+    star.className = "star";
+    var xy = getRandomPosition();
+        star.style.top = xy[0] + 'px';
+        star.style.left = xy[1] + 'px';
+    document.body.append(star);
+    }
+
+    // Gets random x, y values based on the size of the container
+    function getRandomPosition() {  
+    var y = window.innerWidth;
+    var x = window.innerHeight;
+        var randomX = Math.floor(Math.random()*x);
+        var randomY = Math.floor(Math.random()*y);
+        return [randomX,randomY];
+    }
+    </script>
+</body>
+</html>
+
+  
+  
