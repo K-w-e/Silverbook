@@ -77,6 +77,12 @@ a, a:hover{
     width: 80%; /* 600px/80%? Larghezza fissa rende scritte statiche */
     margin-left: 10%;
 }
+/*@media only screen and (min-width: 768px) {
+    .box{width: 400px;}
+}
+@media only screen and (min-width: 990px) {
+    .box{width: 600px;}
+}*/
 
 .a{
     background-color: #b2ebf2;
