@@ -25,48 +25,17 @@
             
         }
 
-        .ao{
-            animation: imageToLeftBottom 6s linear;
+        .sx{
+            animation: imageToLeftBottom 8s linear;
+        }
+
+        .dx{
+            animation: imageToRightBottom 8s linear;
         }
 
         .image:hover{
             -webkit-animation-play-state: paused;
         }
-/*
-        img:nth-child(1) {    
-            z-index: 3;
-            animation: imageToLeftBottom 6s linear;
-        }
-
-        img:nth-child(2) {    
-            z-index: 2;
-            animation: imageToLeftBottom 8s linear 2s;
-        }
-
-        img:nth-child(3) {    
-            z-index: 1;
-            animation: imageToLeftBottom 10s linear 4s;
-        }
-
-        .test4 {    
-            z-index: 3;
-            animation: imageToRightBottom 6s linear;
-        }
-
-        .test5 {    
-            z-index: 2;
-            animation: imageToRightBottom 8s linear 2s;
-        }
-
-        .test6 {    
-            z-index: 1;
-            animation: imageToRightBottom 10s linear 4s;
-        }
-
-        .prova{
-            z-index: -2;
-        }
-*/
         @keyframes imageToLeftBottom {
             0% {
                 top: 20%;
@@ -121,7 +90,12 @@
         <img class="image test1" src="https://cataas.com/cat" >
         <img class="image test2" src="https://cataas.com/cat/cute" >
         <img class="image test3" src="https://cataas.com/cat/says/hello" >
-    
+        <img class="image test4" src="https://cataas.com/cat" >
+        <img class="image test5" src="https://cataas.com/cat/cute" >
+        <img class="image test6" src="https://cataas.com/cat/says/hello" >
+        <img class="image test1" src="https://cataas.com/cat" >
+        <img class="image test2" src="https://cataas.com/cat/cute" >
+        <img class="image test3" src="https://cataas.com/cat/says/hello" >
         <img class="image test4" src="https://cataas.com/cat" >
         <img class="image test5" src="https://cataas.com/cat/cute" >
         <img class="image test6" src="https://cataas.com/cat/says/hello" >
@@ -131,26 +105,36 @@
 
     <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
     <script>
-    
-    $( document ).ready( 
-        add().done(remove())
+        var y;
+
+       $( document ).ready( 
+        add()
         );
-        
+     
     function add(){
-        $("img").each(function (i) {
+        $("img").each(function (i) {         
             var $x = $(this);
             setTimeout(function () { 
-                $x.addClass("ao"); 
-            }, 1000 * (i + 1));
-        });
+                if(i%2)
+                    $x.addClass("dx"); 
+                else
+                    $x.addClass("sx");
+            }, 2000 * (i + 1));
+        })
+
+        setTimeout(function(){
+            $("img").each( function(x) {
+                $(this).removeClass("dx sx");
+                
+            })
+            add();
+        }, ($("img").length )*3000)
     }
             
-    function remove(){
-        $("img").each( function(x) {
-            $(this).removeClass("ao");
-            console.log("aaa");
-        })
-    }
+
+
+
+
 
     
     </script>

@@ -1,62 +1,186 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <title> Silverbook </title>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/styleLibri.css">
-      <link rel="stylesheet" href="css/animate.css">
-      <script src="js/index.js"></script>
-  </head>
-  
-  <body>
-    <div class="blocco">
-      <a class="title" href="Index-Gallery.html">Silverbook</a>
-      <ul class="menu">
-        <li><a href="#">Manifesto</a></li>
-        <li><a href="Libri.html">Autori</a></li>
-        <li><a href="#">Libri</a></li>
-        <li><a href="#">Contatti</a></li>
-        <li><a href="#">Story</a></li>
-      </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+    .grid {
+        position: relative;
+        margin: auto;
+        max-width: 1000px;
+    }
+    
+    .grid figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-height: 500px;
+        max-height: 500px;
+        width: 45%;
+    }
+    
+    .grid figure img {
+        position: absolute;
+        height: 90%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+    }
+    
+/* ----- */
+figcaption{
+    color: #fff;
+    position: relative;
+    margin-top: 300px;
+}
 
-      <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <img class="imgLibri" src="https://source.unsplash.com/random/800x600" />
-                <p class="text">
-                  Titolo<br>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem facere sit reiciendis illum? Vitae, suscipit perspiciatis. Ex autem quidem et eum distinctio! Numquam quasi eaque ab vitae officiis quos doloremque.
-            
+figure.anim{
+    margin: 0;
+}
+
+figure.anim img,
+figure.anim h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.anim h2 {
+	padding: 20px;
+}
+
+figure p{
+    padding: 0px !important;
+    margin: 30px !important;
+    width: 80%;
+}
+
+figure.anim p {
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,100px,0);
+	transform: translate3d(0,100px,0);
+}
+
+figcaption{
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,100px,0);
+	transform: translate3d(0,100px,0);
+}
+
+figure.anim:hover img {
+    transform-origin: top left;
+	-webkit-transform: translate3d(0,-160px,0);
+	transform: translate3d(0,-160px,0);
+}
+
+figure.anim:hover figcaption{
+    -webkit-transform: translate3d(0,-200px,0);
+	transform: translate3d(0,-200px,0);
+}
+
+figure.anim:hover p{
+    opacity: 1;
+    -webkit-transform: translate3d(0,-50px,0);
+	transform: translate3d(0,-50px,0);
+}
+
+    </style>
+</head>
+<body>
+<div class="blocco">
+    <div id="header">
+        <a class="title" href="Index.html">Silverbook</a>
+        <ul class="menu">
+          <li><a href="#">Manifesto</a></li>
+          <li><a href="#">Autori</a></li>
+          <li><a href="Libri.html">Libri</a></li>
+          <li><a href="#">Contatti</a></li>
+          <li><a href="#">Story</a></li>
+        </ul>
+      </div>
+    <div class="grid">
+        <figure class="anim">
+            <img src="https://i.picsum.photos/id/1042/3456/5184.jpg"/>
+            <figcaption>
+                <h2>Titolo libro<br>Autore libro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officiis labore molestiae tenetur ducimus, veritatis tempora deleniti perspiciatis atque magnam nostrum? Totam voluptatibus corrupti maiores harum odio adipisci deleniti recusandae?</p>
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="https://i.picsum.photos/id/1003/1181/1772.jpg"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero possimus expedita soluta officia maxime illum reiciendis reprehenderit rerum hic? Eos pariatur aliquam doloremque error deleniti facilis assumenda vero reprehenderit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iste ipsa sunt aperiam possimus assumenda fuga deleniti nemo maiores qui tenetur veniam, minus rerum doloremque, amet corrupti commodi suscipit eos!
+                    prsad asdjdsjadsad ashudhuahdsu ova descrizione lunga aiufsia askdsakasd asdasd asd asda sd asd sadasddsadas asd asadasdasda s</p>
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="https://i.picsum.photos/id/1004/1182/1774.jpg"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero possimus expedita soluta officia maxime illum reiciendis reprehenderit rerum hic? Eos pariatur aliquam doloremque error deleniti facilis assumenda vero reprehenderit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iste ipsa sunt aperiam possimus assumenda fuga deleniti nemo maiores qui tenetur veniam, minus rerum doloremque, amet corrupti commodi suscipit eos!
+                    prsad asdjdsjadsad ashudhuahdsu ova descrizione lunga aiufsia askdsakasd asdasd asd asda sd asd sadasddsadas asd asadasdasda s</p>
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="http://lorempixel.com/g/400/900/"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero possimus expedita soluta officia maxime illum reiciendis reprehenderit rerum hic? Eos pariatur aliquam doloremque error deleniti facilis assumenda vero reprehenderit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iste ipsa sunt aperiam possimus assumenda fuga deleniti nemo maiores qui tenetur veniam, minus rerum doloremque, amet corrupti commodi suscipit eos!
+                    prsad asdjdsjadsad ashudhuahdsu ova descrizione lunga aiufsia askdsakasd asdasd asd asda sd asd sadasddsadas asd asadasdasda s</p>
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="http://lorempixel.com/g/700/400/"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vero possimus expedita soluta officia maxime illum reiciendis reprehenderit rerum hic? Eos pariatur aliquam doloremque error deleniti facilis assumenda vero reprehenderit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iste ipsa sunt aperiam possimus assumenda fuga deleniti nemo maiores qui tenetur veniam, minus rerum doloremque, amet corrupti commodi suscipit eos!
+                    prsad asdjdsjadsad ashudhuahdsu ova descrizione lunga aiufsia askdsakasd asdasd asd asda sd asd sadasddsadas asd asadasdasda s
+                    Ciao sono alessandro 
                 </p>
-              </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <img class="imgLibri" src="https://source.unsplash.com/random/800x600" />
-                <p class="text">AAAAA</p>
-              </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <img class="imgLibri" src="https://source.unsplash.com/random/800x600" />
-                <p class="text">This</p>
-              </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <img class="imgLibri" src="https://source.unsplash.com/random/800x600" />
-                <p class="text">grrr</p>
-              </div>
-        </div>
-      </div>
-      
-
-      <div class="bot">Footer <br><br> Lorem ipsum</div> 
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="http://lorempixel.com/g/500/600/"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro  s</p>
+            </figcaption>			
+        </figure>
     </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+    <script>
 
-  </body>
+    $( document ).ready(function() {        
+        $("figure").each( function(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+            $(this).css("background-color", bgColor);
+        })       
+    });
+    </script>
+</body>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .grid {
+        position: relative;
+        margin: auto;
+        max-width: 1000px;
+    }
+    
+    /* Common style */
+    .grid figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        max-height: 500px;
+        width: 48%;
+        background: #3085a3;
+    }
+    
+    .grid figure img {
+        position: relative;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+    }
+    
+    .grid figure figcaption {
+        color: #fff;
+    }
+    
+    .grid figure h2,
+    .grid figure p {
+        margin: 0;
+    }
+
+    h2{
+        margin-bottom: 30px;
+    }
+    
+/* ----- */
+figure.anim img,
+figure.anim h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.anim img {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.anim h2,
+figure.anim p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 30px;
+}
+
+figure p{
+    padding: 0px !important;
+    margin: 30px !important;
+    width: 80%;
+}
+
+figure.anim p {
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,100px,0);
+	transform: translate3d(0,100px,0);
+}
+
+figure.anim:hover img {
+    transform-origin: top left;
+	-webkit-transform: translate3d(0,-160px,0);
+	transform: translate3d(0,-160px,0);
+}
+
+figure.anim:hover h2 {
+    transform-origin: top left;
+	-webkit-transform: translate3d(0,-60%,0);
+	transform: translate3d(0,-60%,0);
+}
+
+figure.anim:hover p {
+    transform-origin: top left;
+	opacity: 1;
+	-webkit-transform: translate3d(0,5%,0);
+	transform: translate3d(0,5%,0);
+}
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <figure class="anim">
+            <img src="https://i.picsum.photos/id/1042/3456/5184.jpg" alt="img23"/>
+            <figcaption>
+                <h2>Titolo libro<br>Autore libro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officiis labore molestiae tenetur ducimus, veritatis tempora deleniti perspiciatis atque magnam nostrum? Totam voluptatibus corrupti maiores harum odio adipisci deleniti recusandae?</p>
+            </figcaption>			
+        </figure>
+        <figure class="anim">
+            <img src="https://i.picsum.photos/id/1003/1181/1772.jpg" alt="img24"/>
+            <figcaption>
+                <h2>Titolo libro</h2>
+                <p>Ciao sono alessandro 
+                    prsad asdjdsjadsad ashudhuahdsu ova descrizione lunga aiufsia askdsakasd asdasd asd asda sd asd sadasddsadas asd asadasdasda s</p>
+            </figcaption>			
+        </figure>
+    </div>
+</body>
+</html>

@@ -63,26 +63,26 @@ a, a:hover{
     overflow-y: auto;
 }
 
+#header{
+    position: relative;
+    z-index: 5;
+}
+
 #navs{
     position: fixed;
     height: 100%;
-    width: 80%;
+    width: 100%;
     top: 0;
     right: 0;
+    z-index: 3;
 }
 
 .box{
     visibility: hidden;
     position: relative;
-    width: 80%; /* 600px/80%? Larghezza fissa rende scritte statiche */
+    width: 600px; /* 600px/80%? Larghezza fissa rende scritte statiche */
     margin-left: 10%;
 }
-/*@media only screen and (min-width: 768px) {
-    .box{width: 400px;}
-}
-@media only screen and (min-width: 990px) {
-    .box{width: 600px;}
-}*/
 
 .a{
     background-color: #b2ebf2;
