@@ -10,7 +10,6 @@
     <style>
         #txt{
             padding-top: 25px;
-            width: 90%;
             font-size: 3.5vw;
             line-height: 120%;
         }
@@ -50,7 +49,7 @@
                 width: 35%;
             }
             #txt{
-                font-size: 3.5vw;
+                font-size: 4vw;
             }
             #footer{
                 display: inline-grid;
@@ -61,15 +60,17 @@
                 left: 20px;
                 width: 97%;
                 height: 100px;
+                justify-items: center;
             }
             hr{
                 width: 97%;
             }
             #from{
                 position: relative;
-                bottom: 0px;
-
+                bottom: 0;
                 color: white;
+                margin: 0;
+                padding: 0;
             }
         }
 
@@ -79,19 +80,19 @@
     <img src="img/logoW.png" id="logo">
 
     <div id="txt" class="txt" onclick="">
-        In questi mesi, dove improvvisamente le priorità di tutti<br>
-        si sono di fatto messe in discussione, noi ne abbiamo<br> 
-        approfittato per leggere, rileggere e indirizzare<br>
-        la nostre energie su nuovi progetti e collaborazioni.<br> 
-        Naturale ci è sembrato partire dal nuovo sito, online <br>
-        entro luglio.<br>
+        In questi mesi, dove improvvisamente le priorità di tutti
+        si sono di fatto messe in discussione, noi ne abbiamo
+        approfittato per leggere, rileggere e indirizzare
+        la nostre energie su nuovi progetti e collaborazioni.
+        Naturale ci è sembrato partire dal nuovo sito, online 
+        entro luglio.
     </div>
-
     <script>
         $(document).ready(function() {
-            $(".txt").lettering('lines');
+            $("#txt").lettering();
         });
     </script>
+
 
 
     <hr>
@@ -100,10 +101,11 @@
         <a href="mailto:scrivi.silverbook@gmail.com">Email</a>
         <a href="#">Instagram</a>
         <a href="#">Facebook</a>
-        <span id="from">Rimini Italy</span>
+        <p id="from">Rimini Italy</p>
     </div>
 
 
+    <script src="js/hover.js"></script>
 
     
 </body>

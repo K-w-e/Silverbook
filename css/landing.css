@@ -3,10 +3,17 @@ html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
-*{
+body, html{
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
+
+body{
+    background-color: #00263b;
+    color: #f3c623;
+}
+
 #logo{
     margin-top: 20px;
     margin-left: 20px;
@@ -17,17 +24,54 @@ html { font-family: 'Inter', sans-serif; }
 
 #txt{
     margin: 20px;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 #footer{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 50px;
     position: absolute;
     bottom: 20px;
     left: 20px;
+    width: 97%;
+    height: 100px;
+}
+
+hr{
+    position: absolute;
+    bottom: 150px;
+    left: 20px;
+    width: 97%;
+    border: 1px solid #f3c623;
 }
 
 a{
-    color: black;
+    color: #f3c623;
+}
+
+.line1{
+    font-weight: 100;
+}
+
+.line2{
+    font-weight: 250;
+}
+
+.line3{
+    font-weight: 400;
+}
+
+.line4{
+    font-weight: 550;
+}
+
+.line5{
+    font-weight: 700;
+}
+
+.line6{
+    font-weight: 1000;
 }
 
 @media screen and (min-width: 375px){
@@ -43,7 +87,17 @@ a{
     #txt{
         font-size: 5vw;
     }
+
+    #logo{
+        width: 40%;
+    }
 }
 @media screen and (min-width: 1024px) {
+    #txt{
+        font-size: 3vw;
+    }
 
+    #logo{
+        width: 30%;
+    }
 }
