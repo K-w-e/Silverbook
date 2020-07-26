@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> Silverbook </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/styleBook.css">
+      <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="js/index.js"></script>
+  </head>
+  
+  <body>
+    <div class="blocco">
+      <div id="header">
+        <a class="title" href="Index.html"><img src="img/logoOk.png" class="logo"></a>
+        <ul class="menu">
+          <li><a href="Authors.html">Authors</a></li>
+          <li><a href="#">Manifesto</a></li>
+          <li><a href="Libri.html">Books</a></li>
+          <li><a href="Story.html">Story</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="slides">
+        <img src="https://picsum.photos/800/900">
+        <img src="https://picsum.photos/700/900">
+        <img src="https://picsum.photos/500/800">
+        <img src="https://picsum.photos/900/900">
+      </div>
+      <div class="row">
+        <div class="info col-sm-12 col-md-3">
+            May 2020, English<br>
+            136 pages, Excerpts<br>
+            SERIES<br>
+            Social Distances<br>
+            STATUS<br>
+            Available<br>
+        </div>
+        <div class="description col-sm-12 col-md-6">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eius alias consectetur quia rem, saepe in laboriosam labore voluptatibus eos perspiciatis et, esse vero praesentium fugiat dolorem magni, minima cum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit rerum voluptates officia harum veniam veritatis eius nulla quos aperiam cumque voluptas accusamus incidunt assumenda ratione, saepe mollitia qui consequuntur laboriosam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque molestias totam aut. Incidunt rem facere qui omnis, laborum architecto ipsam vel ea dicta hic veritatis, quam accusamus voluptas quos!
+        </div>
+        <div class="price col-sm-12 col-md-3">
+            Prezzo xx
+        </div>
+    </div>
+      <div class="bot">Footer <br><br> Lorem ipsum</div> 
+
+    </div>
+
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slides').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                variableWidth: true,
+                arrows: true
+            });
+        });
+    </script>
+
+    </body>
+  </html>

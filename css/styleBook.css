@@ -1,0 +1,27 @@
+.slides{
+    padding: 20px;
+    width: 98%;
+    margin: auto;
+    height: 50%;
+}
+
+.slides *{
+    margin-right: 10px;
+}
+
+.price{
+    text-align: end;
+}
+
+.row{
+    margin-left: 0px;  
+    margin-right: 0px;
+}
+
+img{
+    height: 100%;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color:black !important;
+}

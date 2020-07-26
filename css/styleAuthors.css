@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+  }
+
+.container{
+    min-height: 90%;
+}
+
+.author{
+    text-align: center;
+    margin: auto;
+    font-size: 56px;
+}
+
+.author:hover{
+    font-variation-settings: 'wght' 800;
+}

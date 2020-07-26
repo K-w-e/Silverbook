@@ -1,0 +1,17 @@
+.col-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+}
+
+.col-author{
+    font-size: small;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.col-image{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

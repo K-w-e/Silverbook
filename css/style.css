@@ -10,8 +10,15 @@ body{
     overflow-y: auto;
     position: relative;
     min-height: 100vh;
-    background-color: lightgray;
     padding-bottom: 100px;
+}
+
+.title{
+    z-index: -1;
+}
+
+.logo{
+    width: 50%;
 }
 
 .blocco{
@@ -22,11 +29,13 @@ body{
     z-index: 100;
     margin: 0px;
     padding: 0px;
+    padding-top: 35px;
 }
 
 li {
     display: inline;
     padding: 5px;
+    padding-right: 10px;
   }
 
 a, a:hover{
@@ -37,34 +46,136 @@ a, a:hover{
     display: none;
 }
 
-.title{
-    font-size: 3em;
-}
-
 .bot{
     position: absolute;
     bottom: 0;
 }
 
 .tabs{
-    float: right;
     font-size: 30px;
-    cursor: pointer;
     transition: 0.5s;
-    position: -webkit-sticky;
+    cursor: pointer;
 }
 
-.column{
-    width: 4%;
-    height: 150%;
+#navs{
+    position: fixed;
+    height: 100%;
+    width: 100%;
     top: 0;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
+    right: 0;
+    z-index: 3;
 }
+
+.box img{
+    width: 95%;
+}
+
+@media screen and (min-width: 375px){    
+    #navs{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .box{
+        width: 85%;
+    }
+
+
+    .column{
+        width: 100%;
+        height: 6%;
+        bottom: 0;
+        position: absolute;     /*??????????????*/
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .a{
+        bottom: 0;
+        left: 0;
+    }
+
+    .b{
+        bottom: 50px;
+        left: 0;
+    }
+
+    .c{
+        bottom: 100px;
+        left: 0;
+    }
+
+    .d{
+        bottom: 150px;
+        left: 0;
+    }
+
+    #close{
+        bottom: 200px;
+        left: 0;
+        height: 100%;
+    }
+
+}
+@media screen and(min-width: 780px){
+    .tabs{
+        float: right;
+        position: -webkit-sticky;
+        top: 50px;
+    }
+
+    .box{
+        width: 600px;
+    }
+    
+    .column{
+        width: 4%;
+        height: 100%;
+        top: 0;
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .label{
+        transform: rotate(90deg);
+        transform-origin: 0 100%;
+        position: absolute;
+        width: 300px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .tabs{
+        float: right;
+        position: -webkit-sticky;
+    }
+    
+    .box{
+        width: 700px;
+    }
+
+    .column{
+        width: 4%;
+        height: 150%;
+        top: 0;
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .label{
+        transform: rotate(90deg);
+        transform-origin: 0 100%;
+        position: absolute;
+        width: 300px;
+    }
+}
+
+
 
 #header{
     position: relative;
+    width: 50%;
     z-index: 5;
 }
 
@@ -79,8 +190,9 @@ a, a:hover{
 
 .box{
     visibility: hidden;
+    /*display: none;*/
     position: relative;
-    width: 600px; /* 600px/80%? Larghezza fissa rende scritte statiche */
+    /*width: 600px; /* 600px/80%? Larghezza fissa rende scritte statiche */
     margin-left: 10%;
 }
 
@@ -104,12 +216,7 @@ a, a:hover{
     z-index: 1;
 }
 
-.label{
-    transform: rotate(90deg);
-    transform-origin: 0 100%;
-    position: absolute;
-    width: 300px;
-}
+
 
 
 /* GALLERY */
@@ -152,9 +259,85 @@ a, a:hover{
     animation: imageToRightBottom 10s linear 4s;
 }
 
+.test7{
+    z-index: 3;
+    animation: imageToTop 6s linear;
+}
+
+.test8{
+    z-index: 2;
+    animation: imageToTop 8s linear 2s;
+}
+
+.test9{
+    z-index: 1;
+    animation: imageToTop 10s linear 4s;
+}
+
+.test10{
+    z-index: 3;
+    animation: imageToBottom 6s linear;
+}
+
+.test11{
+    z-index: 2;
+    animation: imageToBottom 8s linear 2s;
+}
+
+.test12{
+    z-index: 1;
+    animation: imageToBottom 10s linear 4s;
+}
+
 .prova{
     position: relative;
     z-index: 0;
+}
+
+@keyframes imageToTop {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;        
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        top: 0%;
+        left: 40%;
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        top: -50%;
+        left: 40%;
+        opacity: 1;
+        transform: scale(2.50);
+        width: 18em;
+    } 
+}
+
+@keyframes imageToBottom {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;        
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        top: 80%;
+        left: 40%;
+        opacity: 1;
+        width: 18em;      
+    }
+    100% {
+        top: 150%;
+        left: 40%;
+        opacity: 1;
+        transform: scale(2.50);
+        width: 18em;
+    } 
 }
 
 @keyframes imageToLeftBottom {

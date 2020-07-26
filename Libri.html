@@ -6,125 +6,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLibri.css">
     <link rel="stylesheet" href="css/animate.css">
     <style>
-    html, body{
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-    }
-    .grid {
-        position: absolute;
-        margin: auto;
-        min-width: 100%;
-    }
-    
-    .grid figure {
-        position: relative;
-        float: left;
-        overflow: hidden;
-        margin: 10px 1%;
-        min-height: 500px;
-        max-height: 500px;
-        width: 33.3%;
-    }
-    
-    .grid figure img {
-        position: absolute;
-        height: 90%;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.8;
-    }
-    
-/* ----- */
-figcaption{
-    color: #fff;
-    position: relative;
-    margin-top: 300px;
-}
-
-figure.anim{
-    margin: 0;
-}
-
-figure.anim img,
-figure.anim h2 {
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-}
-
-figure.anim h2 {
-	padding: 20px;
-}
-
-figure p{
-    padding: 0px !important;
-    margin: 30px !important;
-    width: 80%;
-}
-
-figure.anim p {
-	font-size: 90%;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,100px,0);
-	transform: translate3d(0,100px,0);
-}
-
-figcaption{
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,100px,0);
-	transform: translate3d(0,100px,0);
-}
-
-figure.anim:hover img {
-    transform-origin: top left;
-	-webkit-transform: translate3d(0,-160px,0);
-	transform: translate3d(0,-160px,0);
-}
-
-figure.anim:hover figcaption{
-    -webkit-transform: translate3d(0,-200px,0);
-	transform: translate3d(0,-200px,0);
-}
-
-figure.anim:hover p{
-    opacity: 1;
-    -webkit-transform: translate3d(0,-50px,0);
-	transform: translate3d(0,-50px,0);
-}
-
+ 
     </style>
 </head>
 <body>
-<div class="blocco">
-    <div id="header">
-        <a class="title" href="Index.html">Silverbook</a>
-        <ul class="menu">
-          <li><a href="#">Manifesto</a></li>
-          <li><a href="#">Autori</a></li>
-          <li><a href="Libri.html">Libri</a></li>
-          <li><a href="#">Contatti</a></li>
-          <li><a href="#">Story</a></li>
-        </ul>
-      </div>
+    <div class="blocco">
+        <div id="header">
+            <a class="title" href="Index.html"><img src="img/logoOk.png" class="logo"></a>
+                <ul class="menu">
+                    <li><a href="Authors.html">Authors</a></li>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="Libri.html">Books</a></li>
+                    <li><a href="Story.html">Story</a></li>
+                    <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="grid">
-        <figure class="anim">
-            <img src="https://i.picsum.photos/id/1042/3456/5184.jpg"/>
+        <figure class="anim" onclick="location.href='Book1.html';">
+            <img src="http://lorempixel.com/g/500/900/"/>
             <figcaption>
                 <h2>Titolo libro<br>Autore libro</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officiis labore molestiae tenetur ducimus, veritatis tempora deleniti perspiciatis atque magnam nostrum? Totam voluptatibus corrupti maiores harum odio adipisci deleniti recusandae?</p>
             </figcaption>			
         </figure>
         <figure class="anim">
-            <img src="https://i.picsum.photos/id/1003/1181/1772.jpg"/>
+            <img src="http://lorempixel.com/g/500/1000/"/>
             <figcaption>
                 <h2>Titolo libro</h2>
                 <p>Ciao sono alessandro 
@@ -134,7 +45,7 @@ figure.anim:hover p{
             </figcaption>			
         </figure>
         <figure class="anim">
-            <img src="https://i.picsum.photos/id/1004/1182/1774.jpg"/>
+            <img src="http://lorempixel.com/g/400/500/"/>
             <figcaption>
                 <h2>Titolo libro</h2>
                 <p>Ciao sono alessandro 
@@ -180,7 +91,6 @@ figure.anim:hover p{
             </figcaption>			
         </figure>
     </div>
-</div>
     <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
     <script>
 
@@ -195,5 +105,8 @@ figure.anim:hover p{
         })       
     });
     </script>
+
+<!--<div class="bot">Footer <br><br> Lorem ipsum</div> -->
+
 </body>
 </html>

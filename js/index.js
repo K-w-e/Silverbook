@@ -1,8 +1,19 @@
 function closeAll() {
-  document.getElementById("first").style.width = "4%";
-  document.getElementById("second").style.width = "4%";
-  document.getElementById("third").style.width = "4%";
-  document.getElementById("fourth").style.width = "4%";
+  if ($(window).width() <= 1024) {
+    document.getElementById("first").style.height = "6%";
+    document.getElementById("second").style.height = "6%";
+    document.getElementById("third").style.height = "6%";
+    document.getElementById("fourth").style.height = "6%";
+    document.getElementById("close").style.height = "28%";
+    console.log("AAAA");
+  }else {
+    document.getElementById("first").style.width = "4%";
+    document.getElementById("second").style.width = "4%";
+    document.getElementById("third").style.width = "4%";
+    document.getElementById("fourth").style.width = "4%";
+    document.getElementById("close").style.width = "28%";
+    console.log("BBBB");
+  }
 
   document.getElementById("firstBox").style.visibility = "hidden";
   document.getElementById("secondBox").style.visibility = "hidden";
@@ -11,11 +22,22 @@ function closeAll() {
 }
 
 function openFirstTab() {
-  document.getElementById("first").style.width = "60%";
-  document.getElementById("second").style.width = "4%";
-  document.getElementById("third").style.width = "4%";
-  document.getElementById("fourth").style.width = "4%";
-  document.getElementById("close").style.width = "28%";
+  if ($(window).width() <= 1024) {
+    document.getElementById("first").style.height = "60%";
+    document.getElementById("second").style.height = "6%";
+    document.getElementById("third").style.height = "6%";
+    document.getElementById("fourth").style.height = "6%";
+    document.getElementById("close").style.height = "100%";
+    console.log("AAAA");
+  }else {
+    document.getElementById("first").style.width = "60%";
+    document.getElementById("second").style.width = "4%";
+    document.getElementById("third").style.width = "4%";
+    document.getElementById("fourth").style.width = "4%";
+    document.getElementById("close").style.width = "28%";
+    console.log("BBBB");
+  }
+  
 
   document.getElementById("firstBox").style.visibility = "visible";
   document.getElementById("secondBox").style.visibility = "hidden";
@@ -24,11 +46,21 @@ function openFirstTab() {
 }
 
 function openSecondTab() {
-  document.getElementById("first").style.width = "4%";
-  document.getElementById("second").style.width = "60%";
-  document.getElementById("third").style.width = "4%";
-  document.getElementById("fourth").style.width = "4%";
-  document.getElementById("close").style.width = "28%";
+  if ($(window).width() <= 1024) {
+    document.getElementById("first").style.height = "6%";
+    document.getElementById("second").style.height = "60%";
+    document.getElementById("third").style.height = "6%";
+    document.getElementById("fourth").style.height = "6%";
+    document.getElementById("close").style.height = "100%";
+    console.log("AAAA");
+  }else {
+    document.getElementById("first").style.width = "4%";
+    document.getElementById("second").style.width = "60%";
+    document.getElementById("third").style.width = "4%";
+    document.getElementById("fourth").style.width = "4%";
+    document.getElementById("close").style.width = "28%";
+    console.log("BBBB");
+  }
 
   document.getElementById("firstBox").style.visibility = "hidden";
   document.getElementById("secondBox").style.visibility = "visible";
@@ -37,11 +69,21 @@ function openSecondTab() {
 }
 
 function openThirdTab() {
-  document.getElementById("first").style.width = "4%";
-  document.getElementById("second").style.width = "4%";
-  document.getElementById("third").style.width = "60%";
-  document.getElementById("fourth").style.width = "4%";
-  document.getElementById("close").style.width = "28%";
+  if ($(window).width() <= 1024) {
+    document.getElementById("first").style.height = "6%";
+    document.getElementById("second").style.height = "6%";
+    document.getElementById("third").style.height = "60%";
+    document.getElementById("fourth").style.height = "6%";
+    document.getElementById("close").style.height = "100%";
+    console.log("AAAA");
+  }else {
+    document.getElementById("first").style.width = "4%";
+    document.getElementById("second").style.width = "4%";
+    document.getElementById("third").style.width = "60%";
+    document.getElementById("fourth").style.width = "4%";
+    document.getElementById("close").style.width = "28%";
+    console.log("BBBB");
+  }
 
   document.getElementById("firstBox").style.visibility = "hidden";
   document.getElementById("secondBox").style.visibility = "hidden";
@@ -50,11 +92,21 @@ function openThirdTab() {
 }
 
 function openFourthTab() {
-  document.getElementById("first").style.width = "4%";
-  document.getElementById("second").style.width = "4%";
-  document.getElementById("third").style.width = "4%";
-  document.getElementById("fourth").style.width = "60%";
-  document.getElementById("close").style.width = "28%";
+  if ($(window).width() <= 1024) {
+    document.getElementById("first").style.height = "6%";
+    document.getElementById("second").style.height = "6%";
+    document.getElementById("third").style.height = "6%";
+    document.getElementById("fourth").style.height = "60%";
+    document.getElementById("close").style.height = "100%";
+    console.log("AAAA");
+  }else {
+    document.getElementById("first").style.width = "4%";
+    document.getElementById("second").style.width = "4%";
+    document.getElementById("third").style.width = "4%";
+    document.getElementById("fourth").style.width = "60%";
+    document.getElementById("close").style.width = "28%";
+    console.log("BBBB");
+  }
 
   document.getElementById("firstBox").style.visibility = "hidden";
   document.getElementById("secondBox").style.visibility = "hidden";

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        img{
+            position: fixed;
+            opacity: 0;
+        }
+
+        .sx{
+            animation: imageToLeftBottom 8s linear;
+        }
+
+        .dx{
+            animation: imageToRightBottom 8s linear;
+        }
+
+        .up{
+            animation: imageToTop 8s linear;
+        }
+
+        .down{
+            animation: imageToBottom 8s linear;
+        }
+
+        .image:hover{
+            -webkit-animation-play-state: paused;
+        }
+
+        @keyframes imageToLeftBottom {
+            0% {
+                top: 20%;
+                left: 40%;
+                width: 18em;        
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                top: 40%;
+                left: 0%;
+                opacity: 1;
+                width: 18em;      
+            }
+            100% {
+                top: 60%;
+                left: -40%;
+                opacity: 1;
+                transform: scale(2.75);
+                width: 18em;
+            }          
+        }
+
+        @keyframes imageToRightBottom {
+            0% {
+                top: 20%;
+                right: 40%;
+                width: 18em;        
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                top: 40%;
+                right: 0%;
+                opacity: 1;
+                width: 18em;      
+            }
+            100% {
+                top: 60%;
+                right: -40%;
+                opacity: 1;
+                transform: scale(2.75);
+                width: 18em;
+            }          
+        }
+
+        @keyframes imageToTop {
+            0% {
+                top: 20%;
+                left: 40%;
+                width: 18em;        
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                top: 0%;
+                left: 40%;
+                opacity: 1;
+                width: 18em;      
+            }
+            100% {
+                top: -50%;
+                left: 40%;
+                opacity: 1;
+                transform: scale(2.50);
+                width: 18em;
+            } 
+        }
+
+        @keyframes imageToBottom {
+            0% {
+                top: 20%;
+                left: 40%;
+                width: 18em;        
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                top: 80%;
+                left: 40%;
+                opacity: 1;
+                width: 18em;      
+            }
+            100% {
+                top: 150%;
+                left: 40%;
+                opacity: 1;
+                transform: scale(2.50);
+                width: 18em;
+            } 
+        }
+
+    </style>
+
+</head>
+<body>  
+    <div class="prova" id="box">
+        <!--<img class="image test1" src="img/logoW.png" >
+        <img class="image test2" src="img/logoW.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >
+        <img class="image test5" src="img/logo.png" >
+        <img class="image test6" src="img/logo.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >
+        <img class="image test2" src="img/logoW.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >
+        <img class="image test5" src="img/logo.png" >
+        <img class="image test6" src="img/logo.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >
+        <img class="image test2" src="img/logoW.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >
+        <img class="image test5" src="img/logo.png" >
+        <img class="image test6" src="img/logo.png" >
+        <img class="image test3" src="img/logoW.png" >
+        <img class="image test4" src="img/logoW.png" >-->
+
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>  
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        var array = ["https://picsum.photos/200/300", 
+        "https://picsum.photos/300/300", 
+        "https://picsum.photos/200/400", 
+        "https://picsum.photos/500/300",
+        "https://picsum.photos/300/400",
+        "https://picsum.photos/500/500",
+        "https://picsum.photos/600/600",
+        "https://picsum.photos/400/700", 
+        "img/logoW.png", "img/logoW.png", 
+        "img/logoW.png", "img/logoW.png", 
+        "img/logoW.png", "img/logoW.png"];
+        var count = -4;
+        var i = 0;
+        var imgs = $('img');
+        $( document ).ready( 
+            fill(),
+            setInterval(function(){
+                if(count>=$('img').length)
+                    count=-4;
+                count=count+4;
+                aaa()
+            }, 2000)
+        );
+
+        function aaa(){            
+            $("img").eq(count).addClass('sx').delay(8000).queue(
+                function(){
+                      $(this).removeClass('sx');
+                }
+            ),
+
+            $("img").eq(count+1).addClass('dx').delay(8000).queue(
+                function(){
+                    $(this).removeClass('dx');
+                }
+            ),
+
+            $("img").eq(count+2).addClass('up').delay(8000).queue(
+                function(){
+                      $(this).removeClass('up');
+                }
+            ),
+
+            $("img").eq(count+3).addClass('down').delay(8000).queue(
+                function(){
+                    $(this).removeClass('down');
+                }
+            )
+        }
+
+        function fill(){
+            var j, x, y;
+            for (y = array.length - 1; y > 0; y--) {
+                j = Math.floor(Math.random() * (y + 1));
+                x = array[y];
+                array[y] = array[j];
+                array[j] = x;
+            }
+
+            for(var i=0;i<$("img").length;++i) {
+                $("img").eq(i).attr('src', array[i]);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+
+  
+  
+
+
+
+

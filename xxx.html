@@ -1,0 +1,65 @@
+<html>
+  <head>
+      <title> Silverbook </title>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="js/index.js"></script>
+
+      <style>
+          html, body{
+             padding: 0;
+             margin: 0;
+          }
+          .a{
+              background-color: red;
+              width: 100%;
+          }
+          .b{
+              background-color: blue;
+              width: 100%;
+          }
+
+          .group{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+          }
+
+          #blu, #red{
+              display: none;
+          }
+      </style>
+  </head>
+  
+  <body>
+      <div class="group">
+        <div class="a" id="a">a
+            <span id="red">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque similique magnam illo, eos ad optio nulla. Molestias voluptatibus quibusdam dignissimos ab! Ipsum quaerat cumque numquam explicabo nesciunt tempora quidem deserunt.
+            </span>
+        </div>
+        <div class="b" id="b">b
+            <span id="blu">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque similique magnam illo, eos ad optio nulla. Molestias voluptatibus quibusdam dignissimos ab! Ipsum quaerat cumque numquam explicabo nesciunt tempora quidem deserunt.
+            </span>
+        </div>
+      </div>
+      <div id="btn" onclick="red()">RED</div>
+      <div id="btn" onclick="blue()">BLUE</div>
+
+      <script>
+          function blue(){
+            document.getElementById("b").style.height = "100px";
+            document.getElementById("blu").style.display = "block";
+            document.getElementById("a").style.height = "15px";
+            document.getElementById("red").style.display = "none";
+          }
+
+          function red(){
+            document.getElementById("a").style.height = "100px";
+            document.getElementById("red").style.display = "block";
+            document.getElementById("b").style.height = "15px";
+            document.getElementById("blu").style.display = "none";
+          }
+      </script>
+  </body>
+</html>

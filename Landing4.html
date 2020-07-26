@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silverbook</title>
     <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 800px)' href='css/landing4.css' />
     <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
     <script src="js/jquery.lettering.js"></script>
     <style>
@@ -87,10 +88,27 @@
         Naturale ci è sembrato partire dal nuovo sito, online 
         entro luglio.
     </div>
+    
     <script>
         $(document).ready(function() {
+            if(window.innerWidth<800){
+                document.getElementById("txt").innerHTML="In questi mesi, dove improvvisamente le priorità di tutti <br> si sono di fatto messe in discussione, noi ne abbiamo <br> approfittato per leggere, rileggere e indirizzare <br> la nostre energie su nuovi progetti e collaborazioni. <br> Naturale ci è sembrato partire dal nuovo sito, online <br> entro luglio. <br>"
+                $("#txt").lettering('lines');
+            }
+            else{
+                $("#txt").lettering();
+                const script = document.createElement('script');
+                script.src = 'js/hover.js';
+                document.head.append(script);
+
+            }
+        });  
+        
+        
+
+       /* $(document).ready(function() {
             $("#txt").lettering();
-        });
+        }); */
     </script>
 
 
@@ -105,7 +123,7 @@
     </div>
 
 
-    <script src="js/hover.js"></script>
+    <!--<script src="js/hover.js"></script> -->
 
     
 </body>
