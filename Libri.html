@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLibri.css">
+</head>
+
+<body>
+    <div id="header">
+        <a class="title" href="Index.html"><img src="img/logoOk.png" class="logo"></a>
+        <ul class="menu">
+            <li><a href="Authors.html">Authors</a></li>
+            <li><a href="Manifesto.html">Manifesto</a></li>
+            <li><a href="Libri.html" id="active">Books</a></li>
+        </ul>
+    </div>
+
+    <div class="grid">
+        <figure class="anim" onclick="location.href='OltreILuoghi.html';">
+            <img src="img/Books/01_oltre-i-luoghi/silverbook-produzioni-oltre-i-luoghi_01.jpg" />
+            <figcaption>
+                <h2>Oltre i Luoghi</h2>
+                <p>
+                    Tra descrizione e narratività, AA.VV., Editrice Quinlan, 2018
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='Cluster.html';">
+            <img src="img/Books/05_cluster/silverbook-produzioni-cluster-01.jpg" />
+            <figcaption>
+                <h2>Cluster - New Jersey counties</h2>
+                <p>
+                    New Jersey counties
+                    - concept album, Daniele Lisi,
+                    Silver Books Edizioni, 2015
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='Shiprock.html';">
+            <img
+                src="img/Books/02_this is the place, Shiprock serie/silverbook-produzioni-oltre-i-luoghi_daniele-lisi_01.jpg" />
+            <figcaption>
+                <h2>This is place, Shiprock serie</h2>
+                <p>
+                    Shiprock serie — 1998-2016
+                    (Oltre i luoghi estratto, Daniele Lisi, Editrice Quinlan,
+                    2018)
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='Lungofiume.html';">
+            <img src="img/Books/03_lungofiume-libro/silverbook-produzioni-lungofiume-libro-00.jpg" />
+            <figcaption>
+                <h2>Lungofiume</h2>
+                <p>
+                    Luogo d'anime, AA.VV. Silverbook Produzioni, 2016
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='LungofiumeConcept.html';">
+            <img src="img/Books/04_lungofiume-concept-album/silverbook-produzioni-lungofiume-concept-album-01.jpg" />
+            <figcaption>
+                <h2>Lungofiume - Concept album</h2>
+                <p>
+                    Concept album, AA.VV. Silver Books Edizioni, 2014
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='AltriLuoghi.html';">
+            <img src="img/Books/01_oltre-i-luoghi/silverbook-produzioni-oltre-i-luoghi_01.jpg" />
+            <figcaption>
+                <h2>Altri Luoghi</h2>
+                <p>
+                    Pubblicazione realizzata in occasione della mostra Altri
+                    Luoghi presso il Palazzo del Turismo Riccione [24 dicembre 1992 - 10 gennaio 1993]
+                </p>
+            </figcaption>
+        </figure>
+        <figure class="anim" onclick="location.href='InLuogoPubblico.html';">
+            <img src="img/Books/06_in-luogo-pubblico/silverbook-produzioni-luogo-pubblico_01.jpg" />
+            <figcaption>
+                <h2>In Luogo Pubblico</h2>
+                <p>
+                    AA.VV. Silver Books Edizioni 2009
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let i = 0;
+            let colors = [
+                '00b2f0',
+                'feee14',
+                'f42e2d',
+                '009d46',
+                '753e29',
+                'f8ab9b',
+                '1b76bd',
+                'f78d1f',
+                'f05260',
+                'eb509e',
+                '492261',
+                '6a62ab',
+                '424ca1',
+                'bcbcc6',
+                '343440',
+                '110f14',
+            ]
+            $("figure").each(function () {
+                $(this).css("background-color", '#' + colors[i]);
+                i++
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+html, body{
+    overflow: hidden;
+}
+
+.author{
+    font-size: 5vw;
+    text-decoration: underline;
+}
+
+.author:hover{
+    font-variation-settings: 'wght' 700;
+}
+
+@media screen and (min-width: 375px){ 
+    .author{ 
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .container{
+        height: 80vh;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 70px;
+        left: 15px;
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 780px){
+    .author{ 
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .author{ 
+        font-size: 4vw;
+        text-align: left;
+    }
+
+    
+    .container{
+        height: 100vh;
+        margin: auto auto;
+    }
+
+    .footer {
+        height: 30px;
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        width: 100vw;
+    }
+}

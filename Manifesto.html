@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manifesto </title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleManifesto.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <a class="title" href="Index.html"><img src="img/logoOk.png" class="logo"></a>
+    <ul class="menu">
+      <li><a href="Authors.html">Authors</a></li>
+      <li><a href="Manifesto.html" id="active">Manifesto</a></li>
+      <li><a href="Libri.html">Books</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    Nata come editore nel 1990 Silverbooks Edizioni diventa ora
+    <b>Silverbook Produzioni</b>, collettivo di Fotografia Contemporanea
+    e Arti visive. Promuove percorsi di ricerca interdisciplinare
+    tra fotografia e multimedia.
+    <br><br>
+    <b>Manifesto</b><br>
+    Gli autori di Silverbook Produzioni non operano in una modalità
+    ideologicamente documentaria ma spesso, in un humus culturale
+    e immaginario, omologo all’esperienza storica del <span class="documentario">documentario</span>
+    o meglio ancora della documentarietà o documentarismo, cioè
+    di un operatività legata ai luoghi non scevra però da altre suggestioni
+    e in cui lo <span class="spazio">spazio</span> non sia l’unico <span class="campo">campo</span> immaginativo
+    d’azione.
+    Se l’azione rappresentativa “classica”, convinta di documentare,
+    agisce nella logica dell’unità di <span class="tempo">tempo</span> e di luogo, l’azione degli autori
+    è inclusiva, pratica la <span class="libera-associazione">libera associazione</span> alla ricerca spasmodica
+    del <span class="possibile">possibile</span>, convinta che nulla sia impossibile.
+    <br><br>
+    Dunque un principio <span class="afocale">a-focale</span> guclassa l’azione del guardare, verso
+    un punto di vista plurimo e <span class="multiverso">multiverso</span>. Nel tentativo, spesso sospeso,
+    di “ricomporre il mosaico”. Recupero della narrazione e delle <span class="microstorie">microstorie</span>,
+    spesso frammentarie e frammentate, dove domina il caso, il <span class="simultaneo">simultaneo</span>,
+    le strutture itineranti e ripetute, il <span class="fraintendimento">fraintendimento</span>, la sospensione
+    del <span class="giudizio">giudizio</span> o la sua <span class="ambivalente">ambivalente</span>
+    determinazione.<br><br>
+    Le parole chiave di seguito riportate rappresentano di fatto la filosofia
+    ed il modus operandi del gruppo:<br>
+    <i>
+      decentrato -
+      campo -
+      soffice -plug in -
+      glocal -
+      quantico -
+      indeterminato -
+      elettronico - spazio virtuale - simultaneità - tattile - multisensoriale - modo
+      di essere - organico - dissolvenza - software - networking - associativo -
+      random - non lineare - gioco di ruolo - multiuso - non specialistico -
+      omeopatico.</i>
+
+    <div id="background" class="background hover"></div>
+  </div>
+
+  <script>
+    if ($(window).width() > 767) {
+      $('span').mouseover(
+        function (e) {
+          $('#background').css("background-image", `url(img/Manifesto/${e.target.className.split(" ")[0]}.jpg)`);
+        }
+      )
+
+      $('span').mouseout(
+        function () {
+          $('#background').css("background-image", `url()`);
+        }
+      )
+    }
+  </script>
+
+  <footer class="footer row">
+    <div class="col-md-3">
+      <a href="mailto:scrivi.silverbook@gmail.com">e-mail</a>
+    </div>
+    <div class="col-md-3">
+      <a href="https://www.instagram.com/silverbook_produzioni/" target="_blank">Instagram</a>
+    </div>
+    <div class="col-md-3">Rimini - Italy</div>
+  </footer>
+</body>
+
+</html>

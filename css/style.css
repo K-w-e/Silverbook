@@ -1,0 +1,400 @@
+@font-face {
+    src: url('../fonts/Antarctica-Beta-VF.ttf');
+    font-family: Antarctica;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Antarctica';
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.btn-more {
+    text-decoration: underline;
+}
+
+.btn-more:hover {
+    cursor: pointer;
+}
+
+.title {
+    z-index: -1;
+}
+
+#active {
+    font-variation-settings: 'wght'800;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    font-size: 25px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+
+.logo {
+    padding: 10px;
+    width: 35%;
+}
+
+li:hover {
+    font-variation-settings: 'wght'700;
+}
+
+.slick-prev, .slick-next{
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.slick-prev::after {
+    background: transparent url('../img/arrow.png') no-repeat center !important;
+    background-size: 60px !important;
+    display: block !important;
+    width: 60px !important;
+    height: 60px !important;
+    content: "" !important;
+    transform: rotate(180deg);
+}
+
+.slick-next::after {
+    background: transparent url('../img/arrow.png') no-repeat center !important;
+    background-size: 60px !important;
+    display: block !important;
+    width: 60px !important;
+    height: 60px !important;
+    content: "" !important;
+}
+
+.slick-arrow {
+    top: 900px;
+}
+
+.slick-next {
+    right: 0px;
+}
+
+.slick-prev {
+    left: 0px;
+}
+
+.slick-list {
+    padding-top: 40px;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+@media screen and (max-width: 780px) {
+    .logo {
+        padding: 10px;
+        width: 100%;
+    }
+
+    #header {
+        font-size: 15px;
+        padding-left: 0px;
+    }
+
+    li {
+        padding-right: 10px;
+    }
+
+    .slick-prev, .slick-next{
+        background-size: 30px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .slick-arrow {
+        top: 320px;
+    }
+
+    .slick-arrow:after {
+        background-size: 30px;
+    }
+
+    .slick-prev, .slick-next{
+        background-size: 30px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .slick-prev::after {
+        background-size: 30px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .slick-next::after {
+        background-size: 30px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .slick-list {
+        padding-top: 40px;
+    }
+}
+
+
+@media screen and(max-width: 1024px) {
+    .logo {
+        padding: 10px;
+        width: 50%;
+    }
+
+    #header {
+        font-size: 28px;
+    }
+
+    li {
+        padding-right: 40px;
+    }
+
+    .logo {
+        padding: 10px;
+        width: 40%;
+    }
+}
+
+.blocco {
+    padding: 10px;
+}
+
+.menu {
+    z-index: 100;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 35px;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+}
+
+a, a:hover {
+    color: black;
+}
+
+.box img {
+    width: 95%;
+}
+
+.footer {
+    border-top: solid 1px grey;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* GALLERY */
+.image {
+    position: fixed;
+    opacity: 0;
+}
+
+.sx {
+    animation: imageToLeftBottom 8s linear;
+}
+
+.dx {
+    animation: imageToRightBottom 8s linear;
+}
+
+.up {
+    animation: imageToTop 8s linear;
+}
+
+.down {
+    animation: imageToBottom 8s linear;
+}
+
+.image:hover {
+    -webkit-animation-play-state: paused;
+}
+
+.test1 {
+    z-index: 3;
+    animation: imageToLeftBottom 6s linear;
+}
+
+.test2 {
+    z-index: 2;
+    animation: imageToLeftBottom 8s linear 2s;
+}
+
+.test3 {
+    z-index: 1;
+    animation: imageToLeftBottom 10s linear 4s;
+}
+
+.test4 {
+    z-index: 3;
+    animation: imageToRightBottom 6s linear;
+}
+
+.test5 {
+    z-index: 2;
+    animation: imageToRightBottom 8s linear 2s;
+}
+
+.test6 {
+    z-index: 1;
+    animation: imageToRightBottom 10s linear 4s;
+}
+
+.test7 {
+    z-index: 3;
+    animation: imageToTop 6s linear;
+}
+
+.test8 {
+    z-index: 2;
+    animation: imageToTop 8s linear 2s;
+}
+
+.test9 {
+    z-index: 1;
+    animation: imageToTop 10s linear 4s;
+}
+
+.test10 {
+    z-index: 3;
+    animation: imageToBottom 6s linear;
+}
+
+.test11 {
+    z-index: 2;
+    animation: imageToBottom 8s linear 2s;
+}
+
+.test12 {
+    z-index: 1;
+    animation: imageToBottom 10s linear 4s;
+}
+
+.prova {
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes imageToTop {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        top: 0%;
+        left: 40%;
+        opacity: 1;
+        width: 18em;
+    }
+
+    100% {
+        top: -50%;
+        left: 40%;
+        opacity: 1;
+        transform: scale(2.50);
+        width: 18em;
+    }
+}
+
+@keyframes imageToBottom {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        top: 80%;
+        left: 40%;
+        opacity: 1;
+        width: 18em;
+    }
+
+    100% {
+        top: 150%;
+        left: 40%;
+        opacity: 1;
+        transform: scale(2.50);
+        width: 18em;
+    }
+}
+
+@keyframes imageToLeftBottom {
+    0% {
+        top: 20%;
+        left: 40%;
+        width: 18em;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        top: 40%;
+        left: 0%;
+        opacity: 1;
+        width: 18em;
+    }
+
+    100% {
+        top: 60%;
+        left: -40%;
+        opacity: 1;
+        transform: scale(2.75);
+        width: 18em;
+    }
+}
+
+@keyframes imageToRightBottom {
+    0% {
+        top: 20%;
+        right: 40%;
+        width: 18em;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        top: 40%;
+        right: 0%;
+        opacity: 1;
+        width: 18em;
+    }
+
+    100% {
+        top: 60%;
+        right: -40%;
+        opacity: 1;
+        transform: scale(2.75);
+        width: 18em;
+    }
+}
