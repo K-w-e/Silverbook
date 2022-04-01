@@ -1,0 +1,135 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+body, html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #00263b;
+    color: #f3c623;
+}
+
+#nextBtn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#logo {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 30%;
+    height: auto;
+}
+
+
+#txt {
+    margin: 20px;
+    font-size: 2vw;
+}
+
+.footer {
+    border-top: solid 1px grey;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+
+hr {
+    position: absolute;
+    bottom: 150px;
+    left: 20px;
+    width: 97%;
+    border: 1px solid #f3c623;
+}
+
+a {
+    color: #f3c623;
+}
+
+@media screen and (min-width: 375px) {
+    #txt {
+        font-size: 5vw;
+    }
+
+    #logo {
+        width: 60%;
+    }
+}
+
+@media screen and(min-width: 780px) {
+    #txt {
+        font-size: 5vw;
+    }
+
+    #logo {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #txt {
+        font-size: 3vw;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    .footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 102%;
+        height: 40px;
+    }
+}
+
+#txt {
+    padding-top: 25px;
+    font-size: 3.5vw;
+    line-height: 120%;
+}
+
+@media screen and (min-width: 120px) {
+    #txt {
+        font-size: 5vw;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    #logo {
+        width: 88%;
+    }
+}
+
+@media screen and(min-width: 780px) {
+    #txt {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #logo {
+        width: 35%;
+    }
+
+    #txt {
+        font-size: 4vw;
+    }
+}

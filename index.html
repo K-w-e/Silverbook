@@ -1,72 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Silverbook </title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <style>
-    @media screen and (min-width: 375px){ 
-      .footer {
-          position: absolute;
-          bottom: 70px;
-          left: 15px;
-          width: 100vw;
-      }
-    }
-
-    @media screen and (min-width: 1024px){ 
-          .footer {
-            height: 30px !important;
-            position: absolute;
-            bottom: 10px !important;
-            left: 15px;
-            width: 100vw;
-          }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silverbook Produzioni</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 800px)' href='css/landingMob.css' />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
+        integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-  <div id="header">
-    <a class="title" href="index.html"><img src="img/logoOk.png" class="logo"></a>
-    <ul class="menu">
-      <li><a href="Authors.html">Authors</a></li>
-      <li><a href="Manifesto.html">Manifesto</a></li>
-      <li><a href="Libri.html">Books</a></li>
-    </ul>
-  </div>
-  <div class="container">
-    <div class="prova">
-      <img class="image" src="img\Home\cluster_new-jersey_daniele_lisi_04 2.jpg">
-      <img class="image" src="img\Home\cluster_new-jersey_daniele_lisi_04.jpg">
-      <img class="image" src="img\Home\lungofiume_daniele_lisi_silverbook-produzioni_02.jpg">
-      <img class="image" src="img\Home\lungofiume_daniele_lisi_silverbook-produzioni_09.jpg">
-      <img class="image" src="img\Home\minute_daniele_lisi_silverbook-produzioni_02.jpg">
-      <img class="image" src="img\Home\piero_delucca_00.jpg">
-      <img class="image" src="img\Home\piero_delucca_01.jpg">
-      <img class="image" src="img\Home\piero_delucca_02 2.jpg">
-      <img class="image" src="img\Home\piero_delucca_02.jpg">
-      <img class="image" src="img\Home\piero_delucca_03.jpg">
-      <img class="image" src="img\Home\piero_delucca_04.jpg">
-      <img class="image" src="img\Home\piero_delucca_04 2.jpg">
-      <img class="image" src="img\Home\shiprock_daniele_lisi_04.jpg">
+    <img src="img/logoOk.png" id="logo">
 
+    <a id="nextBtn" href="Home.html">Continua . . . </a>
+
+    <div id="txt" class="txt">
+        In questi mesi, dove improvvisamente le priorità di tutti
+        si sono di fatto messe in discussione, noi ne abbiamo
+        approfittato per leggere, rileggere e indirizzare
+        le nostre energie su nuovi progetti e collaborazioni.
+        Naturale ci è sembrato partire dal nuovo sito, online
+        a fine autunno.
     </div>
-    <script src="js/index.js"></script>
-  </div>
-  
-  <footer class="footer row">
-    <div class="col-md-3">
-      <a href="mailto:scrivi.silverbook@gmail.com">e-mail</a>
-    </div>
-    <div class="col-md-3"><a href="https://www.instagram.com/silverbook_produzioni/" target="_blank">Instagram</a>
-    </div>
-    <div class="col-md-3">Rimini - Italy</div>
-  </footer>
+
+    <script>
+        $(document).ready(function () {
+            if (window.innerWidth < 800) {
+                document.getElementById("txt").innerHTML = "In questi mesi, dove improvvisamente le priorità di tutti <br> si sono di fatto messe in discussione, noi ne abbiamo <br> approfittato per leggere, rileggere e indirizzare <br> le nostre energie su nuovi progetti e collaborazioni. <br> Naturale ci è sembrato partire dal nuovo sito, online <br> a fine autunno. <br>"
+                $("#txt").lettering('lines');
+            }
+            else {
+                $("#txt").lettering();
+                const script = document.createElement('script');
+                script.src = 'js/hover.js';
+                document.head.append(script);
+
+            }
+        });  
+    </script>
+
+    <footer class="footer row">
+        <div class="col-md-3">
+            <a href="mailto:scrivi.silverbook@gmail.com">e-mail</a>
+        </div>
+        <div class="col-md-3"><a href="https://www.instagram.com/silverbook_produzioni/" target="_blank">Instagram</a>
+        </div>
+        <div class="col-md-3">Rimini - Italy</div>
+    </footer>
+
 </body>
 
 </html>

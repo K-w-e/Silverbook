@@ -1,7 +1,8 @@
-html, body{
+html, body {
   margin: 0px;
   padding: 0px;
 }
+
 .grid {
   position: absolute;
   margin: auto;
@@ -20,101 +21,124 @@ html, body{
   max-height: 500px;
 }
 
-figure:hover{
+figure:hover {
   cursor: pointer;
 }
 
-@media screen and (min-width: 375px){ 
-  .grid figure{
+@media screen and (min-width: 375px) {
+  .grid figure {
     width: 100%;
-  }   
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  .grid figure img {
+    position: relative;
+    object-fit: cover;
+    width: 94%;
+    height: 90%;
+    margin: 10px;
+  }
+
+  .grid figure figcaption {
+    margin: 10px
+  }
 }
 
-@media screen and(min-width: 780px){
-  .grid figure{
-    width: 50%;
-  }   
+@media screen and(min-width: 780px) {
+  .grid figure {
+    overflow: hidden;
+    width: 95%;
+    height: 90%;
+    margin: 10px 1%;
+    min-height: 500px !important;
+    max-height: 500px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .grid figure{
+  .grid figure {
     width: 33.33333%;
-  }   
-}
-
-.grid figure img {
-  position: absolute;
-  object-fit: cover;
-  width: 95%;
-  height: 90%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-/* ----- */
-figcaption{
-color: #fff;
-color: black;
-position: relative;
-top: 300px;
-}
-
-figure.anim{
-margin: 0;
-}
-
-figure.anim img,
-figure.anim h2 {
--webkit-transition: -webkit-transform 0.35s;
-transition: transform 0.35s;
-}
-
-figure.anim h2 {
-  font-weight: 900;
-  padding: 20px;
-  margin-top: 80px;
-}
-
-figure p{
-padding: 0px !important;
-margin: 20px !important;
-margin-top: 40px !important;
-width: 80%;
-}
-
-figure.anim p {
-font-size: 90%;
-opacity: 0;
--webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-transition: opacity 0.35s, transform 0.35s;
--webkit-transform: translate3d(0,100px,0);
-transform: translate3d(0,100px,0);
-}
-
-figcaption{
--webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-transition: opacity 0.35s, transform 0.35s;
--webkit-transform: translate3d(0,100px,0);
-transform: translate3d(0,100px,0);
-}
-
-figure.anim:hover img {
-transform-origin: top left;
--webkit-transform: translate3d(0,-100px,0);
-transform: translate3d(0,-100px,0);
-}
-
-figure.anim:hover p{
-opacity: 1;
--webkit-transform: translate3d(0,-170px,0);
-transform: translate3d(0,-170px,0);
-}
-
-figure.anim:hover h2{
-  opacity: 1;
-  -webkit-transform: translate3d(0,-120px,0);
-  transform: translate3d(0,-120px,0);
+    height: 90%;
+    margin: 10px 1%;
+    min-height: 500px !important;
+    max-height: 500px;
   }
+
+  .grid figure img {
+    position: absolute;
+    object-fit: cover;
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* ----- */
+  figcaption {
+    color: #fff;
+    color: black;
+    position: relative;
+    top: 300px;
+  }
+
+  figure.anim {
+    margin: 0;
+  }
+
+  figure.anim img,
+  figure.anim h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+  }
+
+  figure.anim h2 {
+    font-weight: 900;
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  figure p {
+    padding: 0px !important;
+    margin: 20px !important;
+    margin-top: 40px !important;
+    width: 80%;
+  }
+
+  figure.anim p {
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  figcaption {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  figure.anim:hover img {
+    transform-origin: top left;
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
+
+  figure.anim:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -170px, 0);
+    transform: translate3d(0, -170px, 0);
+  }
+
+  figure.anim:hover h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -120px, 0);
+    transform: translate3d(0, -120px, 0);
+  }
+}

@@ -33,7 +33,7 @@ body {
 }
 
 #active {
-    font-variation-settings: 'wght'800;
+    font-variation-settings: 'wght' 800;
 }
 
 #header {
@@ -51,10 +51,10 @@ body {
 }
 
 li:hover {
-    font-variation-settings: 'wght'700;
+    font-variation-settings: 'wght' 700;
 }
 
-.slick-prev, .slick-next{
+.slick-prev, .slick-next {
     width: 60px !important;
     height: 60px !important;
 }
@@ -113,7 +113,7 @@ li:hover {
         padding-right: 10px;
     }
 
-    .slick-prev, .slick-next{
+    .slick-prev, .slick-next {
         background-size: 30px !important;
         width: 30px !important;
         height: 30px !important;
@@ -127,7 +127,7 @@ li:hover {
         background-size: 30px;
     }
 
-    .slick-prev, .slick-next{
+    .slick-prev, .slick-next {
         background-size: 30px !important;
         width: 30px !important;
         height: 30px !important;
@@ -138,7 +138,7 @@ li:hover {
         width: 30px !important;
         height: 30px !important;
     }
-    
+
     .slick-next::after {
         background-size: 30px !important;
         width: 30px !important;
