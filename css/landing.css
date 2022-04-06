@@ -29,6 +29,7 @@ body {
 
 #txt {
     margin: 20px;
+    margin-top: 40px;
     font-size: 2vw;
 }
 
@@ -41,7 +42,7 @@ body {
 }
 
 a {
-    color: #f3c623;
+    color: black;
 }
 
 @media screen and (min-width: 375px) {
@@ -49,7 +50,7 @@ a {
         font-size: 5vw;
     }
 
-    #logo {
+    .logo {
         width: 60%;
     }
 }
@@ -59,7 +60,7 @@ a {
         font-size: 5vw;
     }
 
-    #logo {
+    .logo {
         width: 40%;
     }
 }
@@ -69,7 +70,7 @@ a {
         font-size: 3vw;
     }
 
-    #logo {
+    .logo {
         width: 30%;
     }
 
@@ -97,8 +98,8 @@ a {
         width: 90%;
     }
 
-    #logo {
-        width: 88%;
+    .logo {
+        width: 100%;
     }
 }
 
@@ -109,7 +110,7 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-    #logo {
+    .logo {
         width: 35%;
     }
 

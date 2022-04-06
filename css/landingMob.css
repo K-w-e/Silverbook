@@ -2,16 +2,20 @@ html, body{
     overflow: hidden;
 }
 
+.logo{
+    padding: 10px;
+}
+
 #nextBtn{
     padding-top: 60px;
 }
 
 .line1{
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .line2{
-    font-weight: 200;
+    font-weight: 250;
 }
 
 .line3{
@@ -27,7 +31,7 @@ html, body{
 }
 
 .line6{
-    font-weight: 6000;
+    font-weight: 600;
 }
 
 .line7{
