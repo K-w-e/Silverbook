@@ -1,23 +1,45 @@
+html, body{
+    overflow: hidden;
+}
+
+#nextBtn{
+    padding-top: 60px;
+}
+
 .line1{
     font-weight: 100;
 }
 
 .line2{
-    font-weight: 250;
+    font-weight: 200;
 }
 
 .line3{
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .line4{
-    font-weight: 550;
+    font-weight: 400;
 }
 
 .line5{
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .line6{
-    font-weight: 1000;
+    font-weight: 6000;
+}
+
+.line7{
+    font-weight: 700;
+}
+
+.line8{
+    font-weight: 800;
+}
+
+.footer{
+    width: 104%;
+    position: absolute;
+    bottom: 50px;
 }

@@ -17,8 +17,8 @@ body, html {
 }
 
 body {
-    background-color: #00263b;
-    color: #f3c623;
+    background-color: white;
+    color: black;
 }
 
 #nextBtn{
@@ -26,14 +26,6 @@ body {
     top: 30px;
     right: 30px;
 }
-
-#logo {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 30%;
-    height: auto;
-}
-
 
 #txt {
     margin: 20px;
@@ -46,14 +38,6 @@ body {
     padding-top: 10px;
     font-size: 15px;
     height: 40px;
-}
-
-hr {
-    position: absolute;
-    bottom: 150px;
-    left: 20px;
-    width: 97%;
-    border: 1px solid #f3c623;
 }
 
 a {
