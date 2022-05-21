@@ -9,23 +9,33 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <style>
-    @media screen and (min-width: 375px){ 
+    @media screen and (min-width: 375px) {
       .footer {
-          position: absolute;
-          bottom: 70px;
-          left: 15px;
-          width: 100vw;
+        position: absolute;
+        bottom: 70px;
+        left: 15px;
+        width: 100vw;
       }
     }
 
-    @media screen and (min-width: 1024px){ 
-          .footer {
-            height: 30px !important;
-            position: absolute;
-            bottom: 10px !important;
-            left: 15px;
-            width: 100vw;
-          }
+    @media screen and (max-width: 1024px) {
+      .footer {
+        position: absolute;
+        bottom: 0px;
+        left: 15px;
+        height: 40px;
+        width: 100vw;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .footer {
+        height: 30px !important;
+        position: absolute;
+        bottom: 10px !important;
+        left: 15px;
+        width: 100vw;
+      }
     }
   </style>
 </head>
@@ -58,7 +68,7 @@
     </div>
     <script src="js/index.js"></script>
   </div>
-  
+
   <footer class="footer row">
     <div class="col-md-3">
       <a href="mailto:scrivi.silverbook@gmail.com">e-mail</a>

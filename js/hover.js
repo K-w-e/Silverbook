@@ -7,7 +7,7 @@ document.addEventListener("mousemove", function (event) {
     const dy = (div.offsetTop) - y
     const dist = Math.sqrt(dx * dx + dy * dy)
     
-    const score = Math.exp(dist * -0.006)
+    const score = Math.exp(dist * -0.003)
     
     div.style.transform = "scale(" + score + ")"
     div.style.fontWeight = 100 + (100 * Math.floor(8 * score))

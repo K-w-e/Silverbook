@@ -1,12 +1,16 @@
-@import url('https://rsms.me/inter/inter.css');
+@font-face {
+    src: url('../fonts/Antarctica-Beta-VF.ttf');
+    font-family: Antarctica;
+}
 
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Antarctica', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
     html {
-        font-family: 'Inter var', sans-serif;
+        font-family: 'Antarctica', sans-serif;
+        font-variation-settings: 'wght'100;
     }
 }
 
@@ -14,20 +18,25 @@ body, html {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-family: 'Antarctica';
 }
 
 body {
     background-color: white;
     color: black;
 }
-
-#nextBtn{
+/*
+#nextBtn {
     position: absolute;
     top: 30px;
     right: 30px;
+}*/
+
+a:hover{
+    color: black
 }
 
-#txt {
+#txt, #nextBtn {
     margin: 20px;
     margin-top: 40px;
     font-size: 2vw;
@@ -72,9 +81,15 @@ a {
 
     .logo {
         width: 30%;
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        font-size: 25px;
+        padding: 10px;
+        padding-left: 45px;
     }
 
-    .footer{
+    .footer {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -115,6 +130,6 @@ a {
     }
 
     #txt {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 }
