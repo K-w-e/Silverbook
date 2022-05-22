@@ -10,14 +10,22 @@
   <link rel="stylesheet" href="css/styleManifesto.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <style>
-    @media screen and (max-width: 1024px) {
+    @media screen and (min-width: 768px) {
       .footer {
-        position: absolute;
-        bottom: 0px;
+        position: fixed;
+        bottom: 30px;
         left: 15px;
-        height: 40px;
         width: 100vw;
-        background-color: white;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .footer {
+        height: 30px !important;
+        position: fixed;
+        bottom: 10px !important;
+        left: 15px;
+        width: 100vw;
       }
     }
   </style>
