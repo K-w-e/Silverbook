@@ -40,3 +40,12 @@ body{
         top: 290px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        height: 40px !important;
+        bottom: 10px !important;
+        left: 15px;
+        width: 100vw;
+    }
+}
